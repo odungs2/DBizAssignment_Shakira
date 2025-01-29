@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><suite allow-return-values="false" configfailurepolicy="skip" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="Test Suite - Yahoo finance page verification" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+<parameter name="browser" value="chrome"/>
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="Test Scenario - Verify Tesla Inc Stock price" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+    <classes>
+      <class name="com.YahooFinanceTest.TeslaIncTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite><!-- Suite -->
