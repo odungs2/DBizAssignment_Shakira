@@ -28,9 +28,9 @@ public class TeslaIncTest extends DriverClass{
 		YahooFinancePage.AutoSuggestionItemVerification("1");
 	}
 	
-	
 	@Test (priority =2)
 	public void VerifyTestlaIncPage() throws IOException, InterruptedException {
+		TeslaIncPage = new TeslaIncPage(driver);
 		//verify Tesla Inc page header
 		TeslaIncPage.teslaIncPageHeader();
 		//Verify Stock Price is greater than $200

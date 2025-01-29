@@ -48,7 +48,6 @@ public class YahooFinancePage extends BrowserActions {
 		String PageHeader = driver.findElement(YahooFinanceHeader).getText();
 		System.out.println("Yahoo Finace header is :"+PageHeader);
 		Assert. assertEquals(PageHeader,"Yahoo Finance", "Page header mismatch");
-
 	}
 	
 	// Enter text to Yahoo Search box
@@ -73,9 +72,7 @@ public class YahooFinancePage extends BrowserActions {
 		Assert.assertEquals(ActualIndex, Index, "Tesla, Inc. Not in " + Index + "Index Position");
 		//click on the Auto suggestion element
 		Assertions.validateAssertion(clickElement(AutoSuggestItem));
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);	
 	}
-	
-	
 
 }

@@ -34,7 +34,7 @@ public class DriverClass {
 		driver.manage().window().maximize();
 		
 		driver.get("https://finance.yahoo.com/");
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		log.info("Url Loaded");
 
@@ -43,6 +43,6 @@ public class DriverClass {
 	@AfterSuite
 	public void exit() {
 		System.out.println("test done");
-		//driver.quit();
+		driver.quit();
 	}
 	}

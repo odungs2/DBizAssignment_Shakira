@@ -47,18 +47,18 @@ public class TeslaIncPage extends BrowserActions {
 
 	// Method for verify Tesla Inc finance page header
 	public void teslaIncPageHeader() throws InterruptedException, IOException {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(180));
 		wait.until(ExpectedConditions.presenceOfElementLocated(TeslaIncHeader));
 		Assertions.validateAssertion(checkElementVisibility(TeslaIncHeader));
 		String PageHeader = driver.findElement(TeslaIncHeader).getText();
 		System.out.println("Yahoo Finace header is :"+PageHeader);
-		Assert. assertEquals(PageHeader, "*(TSL)", "Page header mismatch");
+		Assert. assertEquals(PageHeader, "Tesla, Inc. (TSLA)", "Page header mismatch");
 	}
 	
 	// Verify Stock price is greater than specified value
 	public void VerifyCurrentStockPrice(int ExpectedCurrentStockValue) throws InterruptedException, IOException {
 		Assertions.validateAssertion(checkElementVisibility(CurrentStockPrice));
-		int CurrentStockValue = Integer.parseInt(driver.findElement(CurrentStockPrice).getText());
+		Double CurrentStockValue = Double.valueOf(driver.findElement(CurrentStockPrice).getText());
 		SoftAssert softAssert = new SoftAssert();
 		softAssert.assertTrue(CurrentStockValue >= ExpectedCurrentStockValue);
 		}
